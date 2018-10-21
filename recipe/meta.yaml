@@ -1,5 +1,4 @@
-{% set version = '1.6' %}
-
+{% set version = '1.7' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,46 +9,49 @@ package:
 source:
   fn: BatchJobs_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/BatchJobs_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/BatchJobs/BatchJobs_{{ version }}.tar.gz
-  sha256: 40ed6d2ed287424d2d177560719e0e74aded25a1cb08c1985f054649044869cd
+    - {{ cran_mirror }}/src/contrib/BatchJobs_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/BatchJobs/BatchJobs_{{ version }}.tar.gz
+  sha256: 49ef69adfb42f085c7ed143a80d78566d55d794ee9a1e1c83d85dbac2a2aa60c
 
 build:
+  merge_build_host: True  # [win]
   number: 0
   skip: true  # [win32]
-
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
+    - {{posix}}zip               # [win]
+  host:
     - r-base
     - r-bbmisc >=1.9
     - r-dbi
-    - r-rsqlite >=1.0.0
+    - r-rsqlite >=1.0.9011
+    - r-backports >=1.1.1
     - r-brew
-    - r-checkmate >=1.5.1
+    - r-checkmate >=1.8.0
+    - r-data.table >=1.9.6
     - r-digest
-    - r-fail >=1.2
     - r-sendmailr
-    - r-stringr
-
+    - r-stringi >=0.4_1
   run:
     - r-base
     - r-bbmisc >=1.9
     - r-dbi
-    - r-rsqlite >=1.0.0
+    - r-rsqlite >=1.0.9011
+    - r-backports >=1.1.1
     - r-brew
-    - r-checkmate >=1.5.1
+    - r-checkmate >=1.8.0
+    - r-data.table >=1.9.6
     - r-digest
-    - r-fail >=1.2
     - r-sendmailr
-    - r-stringr
+    - r-stringi >=0.4_1
 
 test:
   commands:
-    - $R -e "library('BatchJobs')"  # [not win]
+    - $R -e "library('BatchJobs')"           # [not win]
     - "\"%R%\" -e \"library('BatchJobs')\""  # [win]
 
 about:
@@ -65,3 +67,6 @@ extra:
     - johanneskoester
     - bgruening
     - daler
+    - jdblischak
+    - cbrueffer
+    - dbast
