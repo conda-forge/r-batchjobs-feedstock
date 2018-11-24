@@ -14,9 +14,8 @@ Summary: Provides Map, Reduce and Filter variants to generate jobs on batch comp
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-batchjobs-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-batchjobs-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/r-batchjobs-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-batchjobs-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-batchjobs-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-batchjobs-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/r-batchjobs-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/r-batchjobs-feedstock)
 
 Current release info
 ====================
