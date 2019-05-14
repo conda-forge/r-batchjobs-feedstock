@@ -1,4 +1,4 @@
-{% set version = '1.7' %}
+{% set version = "1.8" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -11,12 +11,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/BatchJobs_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/BatchJobs/BatchJobs_{{ version }}.tar.gz
-  sha256: 49ef69adfb42f085c7ed143a80d78566d55d794ee9a1e1c83d85dbac2a2aa60c
+  sha256: 35cc2dae31994b1df982d11939509ce965e12578418c4fbb8cd7a422afd6e4ff
 
 build:
   noarch: generic
   merge_build_host: True  # [win]
-  number: 1000
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
