@@ -60,6 +60,7 @@ about:
     like PBS/Torque, LSF, SLURM and Sun Grid Engine. Multicore and SSH systems are also
     supported. For further details see the project web page.
   license_family: BSD
+  license_file: LICENSE
 
 extra:
   recipe-maintainers:
