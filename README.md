@@ -3,7 +3,7 @@ About r-batchjobs
 
 Home: https://github.com/tudo-r/BatchJobs
 
-Package license: BSD_2_clause
+Package license: BSD-2-Clause
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-batchjobs-feedstock/blob/master/LICENSE.txt)
 
