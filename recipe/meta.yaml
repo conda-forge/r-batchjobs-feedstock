@@ -55,12 +55,14 @@ test:
 
 about:
   home: https://github.com/tudo-r/BatchJobs
-  license: BSD_2_clause
+  license: BSD-2-Clause
   summary: Provides Map, Reduce and Filter variants to generate jobs on batch computing systems
     like PBS/Torque, LSF, SLURM and Sun Grid Engine. Multicore and SSH systems are also
     supported. For further details see the project web page.
   license_family: BSD
-  license_file: LICENSE
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/BSD_2_clause
+    - LICENSE
 
 extra:
   recipe-maintainers:
