@@ -1,11 +1,11 @@
-About r-batchjobs
-=================
+About r-batchjobs-feedstock
+===========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-batchjobs-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/tudo-r/BatchJobs
 
 Package license: BSD-2-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-batchjobs-feedstock/blob/main/LICENSE.txt)
 
 Summary: Provides Map, Reduce and Filter variants to generate jobs on batch computing systems like PBS/Torque, LSF, SLURM and Sun Grid Engine. Multicore and SSH systems are also supported. For further details see the project web page.
 
